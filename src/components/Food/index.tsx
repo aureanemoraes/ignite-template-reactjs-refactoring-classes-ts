@@ -20,9 +20,9 @@ interface FoodProps {
 }
 
 export function Food (props: FoodProps) {
-  const [food] = useState<Food>(props.food);
+  const [food, setFood] = useState<Food>(props.food);
   const [isAvailable, setIsAvailable] = useState<boolean>(food.available);
-  
+
   async function toggleAvailable () {
     setIsAvailable(!isAvailable);
     
